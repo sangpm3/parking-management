@@ -31,17 +31,17 @@ import Scrollbar from '../../../components/scrollbar';
 const NOTIFICATIONS = [
   {
     id: faker.datatype.uuid(),
-    title: 'Your order is placed',
-    description: 'waiting for shipping',
+    title: 'New vehicle ',
+    description: 'waiting for parking',
     avatar: null,
     type: 'order_placed',
-    createdAt: set(new Date(), { hours: 10, minutes: 30 }),
+    createdAt: set(new Date(), { hours: 1, minutes: 30 }),
     isUnRead: true,
   },
   {
     id: faker.datatype.uuid(),
     title: faker.name.fullName(),
-    description: 'answered to your comment on the Minimal',
+    description: 'a car go out on the Gate 1',
     avatar: '/assets/images/avatars/avatar_2.jpg',
     type: 'friend_interactive',
     createdAt: sub(new Date(), { hours: 3, minutes: 30 }),
