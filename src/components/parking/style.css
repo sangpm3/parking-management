@@ -1,0 +1,83 @@
+.card-grid-view {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  max-width: 300px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  /* max-width: 450px; */
+  /* min-width: 400px; */
+  width: 100px;
+  border-radius: 15px;
+  color: #333;
+  margin: 10px;
+  cursor: pointer;
+
+  transition: all 0.2s ease-out;
+  border: 1px solid #ddd;
+}
+.card-body:hover {
+  box-shadow: 0 0 4em 0px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
+}
+.card-body:active {
+  transform: scale(1.01) translateY(0.2rem);
+}
+
+/* .card-body img {
+  position: relative;
+  top: -25%;
+  width: 100%;
+} */
+
+.card-body .card-img {
+  width: 100px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 0.8em;
+  font-family: 'Georgia';
+  /* width: 400px; */
+}
+
+.card-content h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.ui-button {
+  margin: 5px 10px;
+}
+.ui-button.clicked {
+  color: #e57373;
+}
+
+.car-right {
+  transform: rotate(90deg);
+  width: 50px;
+  width: 50px;
+  position: absolute;
+  right: 25%;
+  top: -30%;
+}
+
+.car-left {
+  transform: rotate(270deg);
+  width: 50px;
+  width: 50px;
+  position: absolute;
+  right: 25%;
+  top: -30%;
+}
+
+.card-img {
+  position: relative;
+}

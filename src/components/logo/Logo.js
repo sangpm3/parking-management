@@ -38,7 +38,7 @@ const Logo = forwardRef(({ disabledLink = false, sx, ...other }, ref) => {
       }}
       {...other}
     >
-      Packing Manager
+      Parking Manager
     </Box>
   );
 

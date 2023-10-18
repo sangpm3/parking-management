@@ -21,7 +21,7 @@ export default function Router() {
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'user', element: <UserPage /> },
-        { path: 'packing-spaces', element: <ParkingSpacesPage /> },
+        { path: 'parking-spaces', element: <ParkingSpacesPage /> },
         { path: 'blog', element: <BlogPage /> },
       ],
     },

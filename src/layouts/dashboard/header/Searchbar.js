@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 import { Input, Slide, Button, IconButton, InputAdornment, ClickAwayListener } from '@mui/material';
 
 // import { addDoc, collection } from '@firebase/firestore';
-import { child, ref, set, get, push, update } from 'firebase/database';
+import { child, ref, set, get, push, update, onValue, getDatabase } from 'firebase/database';
 import { firestore, database } from '../../../firebase';
 
 // utils
@@ -48,50 +48,11 @@ export default function Searchbar() {
   };
 
   const handleClose = async () => {
-    console.log('log click btn');
-
-    // Write data
-    // const now = new Date();
-    // const minutes = now.getMinutes();
-    // set(ref(database, `users/${minutes}`), {
-    //   username: `sang-${minutes}`,
-    //   email: `sang-${minutes}`,
-    //   profile_picture: `image-${minutes}`,
-    // });
-
-    // read data
-    const dbRef = ref(database);
-    let currentData = null;
-    await get(child(dbRef, `users`))
-      .then((snapshot) => {
-        if (snapshot.exists()) {
-          currentData = snapshot.val();
-          console.log(snapshot.val());
-        } else {
-          console.log('No data available');
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-
-    // update data
-    // Write the new post's data simultaneously in the posts list and the user's post list.
-    console.log('log currentData: ', currentData);
-
-    const updates = {
-      '/users': {
-        ...currentData,
-        count: 1000,
-      },
-    };
-
-    update(ref(database), updates);
-
-    console.log('log end click btn');
-
     // setOpen(false);
   };
+
+  // Get the reference of the database.
+  const database = getDatabase();
 
   return (
     <ClickAwayListener onClickAway={handleClose}>
