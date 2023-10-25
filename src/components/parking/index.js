@@ -55,8 +55,6 @@ export const Parking = () => {
     if (!_.isEqual(dataParking, dataParkingArray)) {
       setDataParking(dataParkingArray);
     }
-    // console.log('log dataParkingArray: ', dataParkingArray);
-    // setDataParking();
   });
 
   const Item = styled(Paper)(({ theme }) => ({
@@ -66,44 +64,6 @@ export const Parking = () => {
     textAlign: 'center',
     color: theme.palette.text.secondary,
   }));
-  // return (
-  //   <div className="">
-  //     <MultiSlot />
-  //     <MultiSlot />
-  //     <MultiSlot />
-  //     <MultiSlot />
-  //   </div>
-  // );
-  // const render = () => {
-  //   const multiSlotArray = [];
-  //   for (let i = 0; i < 6; i += 1) {
-  //     dataParkingArray.forEach((item) => {
-  //       if (i * 6 + (Number(item.slot) % 6) === Number(item.slot)) {
-  //         multiSlotArray.push(
-  //           <Grid item xs={6}>
-  //             <MultiSlot area={i} data={dataParkingArray} />
-  //           </Grid>
-  //         );
-  //       }
-  //       // multiSlotArray.push(
-  //       //   <Grid item xs={6}>
-  //       //     <MultiSlot area={i} data={dataParkingArray} />
-  //       //   </Grid>
-  //       // );
-  //     });
-
-  //     return multiSlotArray;
-  //   }
-  // for (let i = 1; i < 7; i += 1) {
-
-  //   multiSlotArray.push(
-  //     <Grid item xs={6}>
-  //       <MultiSlot area={i} data={dataParkingArray} />
-  //     </Grid>
-  //   );
-  // }
-  //   return multiSlotArray;
-  // };
 
   return (
     <Grid container rowSpacing={3} spacing={1}>
@@ -125,43 +85,6 @@ export const Parking = () => {
       <Grid item xs={6}>
         <MultiSlot area={6} data={dataParkingArray} />
       </Grid>
-      {/* {render()} */}
-      {/* <Grid item xs={6}>
-        <MultiSlot />
-      </Grid>
-      <Grid item xs={6}>
-        <MultiSlot />
-      </Grid>
-      <Grid item xs={6}>
-        <MultiSlot />
-      </Grid>
-      <Grid item xs={6}>
-        <MultiSlot />
-      </Grid>
-      <Grid item xs={6}>
-        <MultiSlot />
-      </Grid>
-      <Grid item xs={6}>
-        <MultiSlot />
-      </Grid> */}
     </Grid>
   );
 };
-
-// export const Slot = ({ content, likeIsClicked, likes }) => {
-//   return (
-//     <div className="card-body">
-//       <UiCard image={content.image} title={content.title} content={content.content} />
-//     </div>
-//   );
-// };
-
-// export const MultiSlot = () => {
-//   return (
-//     <div className="card-grid-view">
-//       {posts.map((e) => {
-//         return <Slot key={e.id} content={e.content} likes={e.likes} likeIsClicked={e.likeIsClicked} />;
-//       })}
-//     </div>
-//   );
-// };
