@@ -13,7 +13,7 @@ import { Parking } from '../components/parking/index';
 
 // ----------------------------------------------------------------------
 
-export default function ParkingSpacesPage() {
+export default function RoomPage() {
   const [openFilter, setOpenFilter] = useState(false);
 
   const handleOpenFilter = () => {

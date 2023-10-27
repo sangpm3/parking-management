@@ -4,6 +4,7 @@ import React from 'react';
 import './style.css';
 
 import car from '../../images/car.png';
+import sleep from '../../images/sleep.png';
 
 const style = {
   position: 'absolute',
@@ -35,6 +36,19 @@ export const UiCard = ({ position, isParking, carInfor }) => {
 
       const convertedDate = `${year}-${formattedMonth}-${formattedDay}`;
 
+      // Convert time 'HH:MM:SS' format
+      const [hour, minute, second] = targetTime.split(':');
+      // Ensure the hour has two digits (add leading zero if needed)
+      const formattedHour = hour.length === 1 ? `0${hour}` : hour;
+
+      // Ensure the minute has two digits (add leading zero if needed)
+      const formattedMinute = minute.length === 1 ? `0${minute}` : minute;
+
+      // Ensure the second has two digits (add leading zero if needed)
+      const formattedSecond = second.length === 1 ? `0${second}` : second;
+
+      const convertedTime = `${formattedHour}:${formattedMinute}:${formattedSecond}`;
+
       // Regular expression to validate the date format 'DD-MM-YYYY'
       const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -42,12 +56,12 @@ export const UiCard = ({ position, isParking, carInfor }) => {
       const timeRegex = /^([0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/;
 
       // Check if the targetDate and targetTime are in the correct format
-      if (!dateRegex.test(convertedDate) || !timeRegex.test(targetTime)) {
+      if (!dateRegex.test(convertedDate) || !timeRegex.test(convertedTime)) {
         return 'Thời gian bị lỗi format';
       }
 
       // Combine the converted target date and time into a single string
-      const targetDateTimeString = `${convertedDate}T${targetTime}`;
+      const targetDateTimeString = `${convertedDate}T${convertedTime}`;
 
       // Parse the target date and time
       const targetDateTime = new Date(targetDateTimeString);
@@ -87,6 +101,19 @@ export const UiCard = ({ position, isParking, carInfor }) => {
 
       const convertedDate = `${year}-${formattedMonth}-${formattedDay}`;
 
+      // Convert time 'HH:MM:SS' format
+      const [hour, minute, second] = targetTime.split(':');
+      // Ensure the hour has two digits (add leading zero if needed)
+      const formattedHour = hour.length === 1 ? `0${hour}` : hour;
+
+      // Ensure the minute has two digits (add leading zero if needed)
+      const formattedMinute = minute.length === 1 ? `0${minute}` : minute;
+
+      // Ensure the second has two digits (add leading zero if needed)
+      const formattedSecond = second.length === 1 ? `0${second}` : second;
+
+      const convertedTime = `${formattedHour}:${formattedMinute}:${formattedSecond}`;
+
       // Regular expression to validate the date format 'DD-MM-YYYY'
       const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -94,11 +121,11 @@ export const UiCard = ({ position, isParking, carInfor }) => {
       const timeRegex = /^([0-1][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/;
 
       // Check if the targetDate and targetTime are in the correct format
-      if (!dateRegex.test(convertedDate) || !timeRegex.test(targetTime)) {
+      if (!dateRegex.test(convertedDate) || !timeRegex.test(convertedTime)) {
         return 'Thời gian bị lỗi format';
       } else {
         // Combine the converted target date and time into a single string
-        const targetDateTimeString = `${convertedDate}T${targetTime}`;
+        const targetDateTimeString = `${convertedDate}T${convertedTime}`;
 
         // Convert start time and end time to JavaScript Date objects
         const startDate = new Date(targetDateTimeString);
@@ -123,7 +150,7 @@ export const UiCard = ({ position, isParking, carInfor }) => {
         <img
           onClick={handleOpen}
           className={`${position % 2 === 0 ? 'car-left' : 'car-right'}`}
-          src={car}
+          src={sleep}
           alt="123"
           style={{ display: isParking ? 'block' : 'none' }}
         />
@@ -136,7 +163,7 @@ export const UiCard = ({ position, isParking, carInfor }) => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Slot: {carInfor?.slot}
+            Phòng: {carInfor?.slot}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             <b>Ngày bắt đầu đỗ:</b> {carInfor?.date}

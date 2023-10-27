@@ -61,21 +61,20 @@
 }
 
 .car-right {
-  transform: rotate(90deg);
-  width: 50px;
-  width: 50px;
+  /* transform: rotate(90deg); */
+  transform: scaleX(-1);
+  width: 90px;
   position: absolute;
-  right: 25%;
-  top: -30%;
+  right: 5%;
+  top: -10%;
 }
 
 .car-left {
-  transform: rotate(270deg);
-  width: 50px;
-  width: 50px;
+  /* transform: rotate(0deg); */
+  width: 90px;
   position: absolute;
-  right: 25%;
-  top: -30%;
+  right: 5%;
+  top: -10%;
 }
 
 .card-img {

@@ -7,8 +7,8 @@ import BlogPage from './pages/BlogPage';
 import UserPage from './pages/UserPage';
 import LoginPage from './pages/LoginPage';
 import Page404 from './pages/Page404';
-import ParkingSpacesPage from './pages/ParkingSpacesPage';
 import DashboardAppPage from './pages/DashboardAppPage';
+import RoomPage from './pages/RoomPage';
 
 // ----------------------------------------------------------------------
 
@@ -21,7 +21,7 @@ export default function Router() {
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'user', element: <UserPage /> },
-        { path: 'parking-spaces', element: <ParkingSpacesPage /> },
+        { path: 'room', element: <RoomPage /> },
         { path: 'blog', element: <BlogPage /> },
       ],
     },

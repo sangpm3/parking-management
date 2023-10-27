@@ -17,8 +17,8 @@ const navConfig = [
     icon: icon('ic_user'),
   },
   {
-    title: 'parking spaces',
-    path: '/dashboard/parking-spaces',
+    title: 'rooms',
+    path: '/dashboard/room',
     icon: icon('ic_cart'),
   },
   {
