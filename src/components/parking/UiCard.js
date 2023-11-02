@@ -166,13 +166,13 @@ export const UiCard = ({ position, isParking, carInfor }) => {
             Phòng: {carInfor?.slot}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <b>Ngày bắt đầu đỗ:</b> {carInfor?.date}
+            <b>Ngày nhận phòng:</b> {carInfor?.date}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <b>Thời gian bắt đầu đỗ:</b> {carInfor?.time}
+            <b>Thời gian nhận phòng:</b> {carInfor?.time}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <b>Đã đỗ được:</b> {calculateTimeElapsed(carInfor?.date, carInfor?.time)}
+            <b>Thời gian sử dụng:</b> {calculateTimeElapsed(carInfor?.date, carInfor?.time)}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             <b>Thành tiền:</b> {calculateParkingCost(carInfor?.date, carInfor?.time)} đồng
