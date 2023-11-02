@@ -34,11 +34,12 @@ const Logo = forwardRef(({ disabledLink = false, sx, ...other }, ref) => {
         width: 40,
         height: 40,
         display: 'inline-flex',
+        whiteSpace: 'nowrap'
         ...sx,
       }}
       {...other}
     >
-      Parking Manager
+      Rooms Manager
     </Box>
   );
 
