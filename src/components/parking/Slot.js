@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import _ from 'lodash';
 import React from 'react';
 import './style.css';
@@ -20,6 +21,9 @@ export const Slot = ({ position, area, carInfor }) => {
 
   return (
     <div className="card-body">
+      <Typography variant="h2" component="h2" sx={{ zIndex: 9 }}>
+        {(area - 1) * 6 + position}
+      </Typography>
       <UiCard position={position} isParking={isParking} carInfor={carInfor} />
     </div>
   );
