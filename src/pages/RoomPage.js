@@ -55,7 +55,7 @@ export default function RoomPage() {
   return (
     <>
       <Helmet>
-        <title>Dashboard: Rooms</title>
+        <title>Rooms</title>
       </Helmet>
 
       <Container>

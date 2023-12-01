@@ -62,7 +62,7 @@ export function calculateTimeElapsed(targetDate, targetTime) {
   return `${days} ngày : ${remainingHours} giờ : ${remainingMinutes} phút: ${remainingSeconds} giây`;
 }
 
-export function calculateParkingCost(targetDate, targetTime) {
+export function calculateParkingCost(targetDate, targetTime, number = false) {
   if (!targetDate || !targetTime) {
     return 'Thời gian bị lỗi format';
   }
@@ -115,6 +115,9 @@ export function calculateParkingCost(targetDate, targetTime) {
   // Calculate the parking cost
   const parkingCost = Math.ceil(timeDifference / 1000) * 10;
   // const parkingCost = daysParked * 5000;\
+  if (number) {
+    return parkingCost;
+  }
 
   return parkingCost.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
 }
